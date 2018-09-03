@@ -1,0 +1,6 @@
+var store = [{
+        "title": "Welcome to dactl!",
+        "excerpt":"You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`.{: .lead}This launches a web server and auto-regenerates your site when...","categories": ["\n"],
+        "tags": ["dactl","jekyll"],
+        "url": "http://localhost:4000/%0A/2017/03/22/welcome-to-dactl.md%0A"
+      }]
