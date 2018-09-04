@@ -1,479 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-       <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<title>dactl </title>
-<!---->
-<meta name="description" content="this should contain a proper description
-">
-<link rel="canonical" href="http://localhost:4000/">
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Blog" />
-<meta name="twitter:description" content="this should contain a proper description
-" />
-<meta name="twitter:image" content="http://localhost:4000" />
-<meta name="author" content="">
-<link rel="author" href="">
-<meta property="og:locale" content="">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Blog">
-<meta property="og:description" content="this should contain a proper description
-">
-<meta property="og:url" content="http://localhost:4000/">
-<meta property="og:site_name" content="dactl">
-<link rel="stylesheet" href="/dactl/assets/vendor/normalize-css/normalize.css">
-<link rel="stylesheet" href="/dactl/assets/css/main.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400italic,700,700italic">
-<style>
-    html {
-      font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-    }
-</style>
-<link rel="stylesheet" href="/dactl/assets/css/bf.css">
-   <body>
-       <div class="wrapper" id="blep">
-          <header>
-   <div class="menu">
-     <div class="logo">
-        <a href="/dactl//">dactl</a>
-        <object type="image/svg+xml" data="/dactl/assets/img/dactl.svg" class="logosvg">Your browser does not support svg images</object>
-     </div>
-       <ul>
-           <li><a href="/dactl//about">about</a>
-           <li><a href="/dactl//archive">archive</a>
-       </ul>
-   </div>
-   <div class="social">
-     <ul>
-       <li>
-            <a href="https://youtube.com/youtube-user-name" target="_blank" class="smaller">
-              <span class="icon-youtube"></span>
-            </a>
-       <li>
-            <a href="https://stackoverflow.com/stackoverflow-user-name" target="_blank" class="smaller">
-              <span class="icon-stackoverflow"></span>
-            </a>
-       <li>
-            <a href="https://twitter.com/twitter-user-name" target="_blank" class="smaller">
-              <span class="icon-twitter"></span>
-            </a>
-       <li>
-            <a href="https://github.com/github-user-name" target="_blank" class="smaller">
-              <span class="icon-github"></span>
-            </a>
-       <li>
-            <a href="mailto:your@email.com" target="_blank">
-              <span class="icon-mail_outline"></span>
-            </a>
-       <li>
-            <a href="/dactl//feed.xml" target="_blank">
-                <span class="icon-rss_feed"></span>
-            </a>
-       <li>
-            <a href="#" onclick="switchTheme()" title="Switch theme?">
-              <span class="icon-invert_colors" id="theme-switcher"></span>
-            </a>
-     </ul>
-   </div>
-</header>
-<article class="blog">
-<style>
-  .welcome-to-dactl {
-    margin-bottom: 2em;
-  }
-  .welcome-to-dactl::before {
-    background-image: url('https://source.unsplash.com/collection/430471/');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .welcome-to-dactl::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(255,0,100,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .welcome-to-dactl-container,
-  .welcome-to-dactl-container::before,
-  .welcome-to-dactl-container::after {
-    height: 25rem;
-  }
-  .welcome-to-dactl-bleed-container,
-  .welcome-to-dactl-bleed-container::before,
-  .welcome-to-dactl-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .welcome-to-dactl-container,
-        .welcome-to-dactl-container::before,
-        .welcome-to-dactl-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        welcome-to-dactl welcome-to-dactl-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/dactl/posts/welcome-to-dactl" title="Welcome to dactl!">Welcome to dactl!</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>22/03/2017</span>
-        <span>
-              <a href="/dactl/tag/dactl">#dactl</a>
-              <a href="/dactl/tag/jekyll">#jekyll</a>
-        </span>
-     </div>
-   </div>
- </div>
-     <p class="lead">You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>.
-       <div class="readmore">
-          <a href="/dactl//posts/welcome-to-dactl" role="button">Read more</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .notices {
-    margin-bottom: 2em;
-  }
-  .notices::before {
-    background-image: url('https://source.unsplash.com/collection/345758/');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .notices::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(100,0,255,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .notices-container,
-  .notices-container::before,
-  .notices-container::after {
-    height: 25rem;
-  }
-  .notices-bleed-container,
-  .notices-bleed-container::before,
-  .notices-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .notices-container,
-        .notices-container::before,
-        .notices-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        notices notices-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/dactl/posts/notices" title="Notice blocks">Notice blocks</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>20/03/2017</span>
-        <span>
-              <a href="/dactl/tag/dactl">#dactl</a>
-              <a href="/dactl/tag/howto">#howto</a>
-        </span>
-     </div>
-   </div>
- </div>
-     <p class="lead">By default dactl has a couple of special classes which will turn a paragraph into a notice block when added to it. Read on for information on how to use it.
-<h2 id="how-to-create-a-notice-block">How to create a notice block</h2>
-<p>Creating notices from your paragraphs works the same way as creating <a href="LINKILYNKI">leading post paragraphs</a>.<br />
-You need to add a correct class <strong>after</strong> the paragraph:
-       <div class="readmore">
-          <a href="/dactl//posts/notices" role="button">Read more</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .config-settings {
-    margin-bottom: 2em;
-  }
-  .config-settings::before {
-    background-image: url('https://source.unsplash.com/collection/582860/');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .config-settings::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(255,0,100,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .config-settings-container,
-  .config-settings-container::before,
-  .config-settings-container::after {
-    height: 25rem;
-  }
-  .config-settings-bleed-container,
-  .config-settings-bleed-container::before,
-  .config-settings-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .config-settings-container,
-        .config-settings-container::before,
-        .config-settings-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        config-settings config-settings-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/dactl/posts/config-settings" title="Layout settings and more in _config.yml">Layout settings and more in _config.yml</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>20/03/2017</span>
-        <span>
-              <a href="/dactl/tag/jekyll">#jekyll</a>
-              <a href="/dactl/tag/dactl">#dactl</a>
-              <a href="/dactl/tag/howto">#howto</a>
-        </span>
-     </div>
-   </div>
- </div>
-     <p class="lead">All of the dactl’s configurations has to be set in <code class="highlighter-rouge">_config.yml</code> file. Read on for explanation of all of the features that you can toggle, including configuring the layout.
-<p>I’ve split dactl’s <code class="highlighter-rouge">_config.yml</code> into two parts. First part should be configured by you, second contains important Jekyll &amp; build settings and you should leave it alone, unless you know what you are doing.
-       <div class="readmore">
-          <a href="/dactl//posts/config-settings" role="button">Read more</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .yaml-frontmatter {
-    margin-bottom: 2em;
-  }
-  .yaml-frontmatter::before {
-    background-image: url('https://source.unsplash.com/collection/345758/');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .yaml-frontmatter::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(255,100,0,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .yaml-frontmatter-container,
-  .yaml-frontmatter-container::before,
-  .yaml-frontmatter-container::after {
-    height: 25rem;
-  }
-  .yaml-frontmatter-bleed-container,
-  .yaml-frontmatter-bleed-container::before,
-  .yaml-frontmatter-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .yaml-frontmatter-container,
-        .yaml-frontmatter-container::before,
-        .yaml-frontmatter-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        yaml-frontmatter yaml-frontmatter-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/dactl/posts/yaml-frontmatter" title="YAML front matter in posts">YAML front matter in posts</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>19/03/2017</span>
-        <span>
-              <a href="/dactl/tag/jekyll">#jekyll</a>
-              <a href="/dactl/tag/dactl">#dactl</a>
-              <a href="/dactl/tag/howto">#howto</a>
-        </span>
-     </div>
-   </div>
- </div>
-     <p class="lead">In order to use dactl’s post images with overlays you’ll need to learn how to set them. You do that in post’s YAML frontmatter and I’ll show you how.
-<h2 id="yaml-front-matter">YAML Front matter</h2>
-<p>Each Jekyll post starts with YAML Front <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>. For example, this is how this post would look like if I wanted to use all of the options:
-<div class="footnotes">
- <ol>
-   <li id="fn:1">
-     <p>Everything in between those two <code class="highlighter-rouge">---</code> <a href="#fnref:1" class="reversefootnote">&#8617;</a>
- </ol>
-</div>
-       <div class="readmore">
-          <a href="/dactl//posts/yaml-frontmatter" role="button">Read more</a>
-       <div>
-</article>
- <hr>
-<article class="blog">
-<style>
-  .tags-in-dactyl {
-    margin-bottom: 2em;
-  }
-  .tags-in-dactyl::before {
-    background-image: url('https://source.unsplash.com/collection/427433/');
-    background-size: cover;
-    -webkit-filter: grayscale(1) brightness(0.5) contrast(0.5);
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: -2;
-  }
-  .tags-in-dactyl::after {
-    content:'';
-    position:absolute;
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgba(100,255,0,0.8);
-    /*mix-blend-mode: darken;
-    mix-blend-mode: color-burn;
-    mix-blend-mode: hard-light;*/
-    mix-blend-mode: overlay;
-    z-index: -1;
-  }
-  .tags-in-dactyl-container,
-  .tags-in-dactyl-container::before,
-  .tags-in-dactyl-container::after {
-    height: 25rem;
-  }
-  .tags-in-dactyl-bleed-container,
-  .tags-in-dactyl-bleed-container::before,
-  .tags-in-dactyl-bleed-container::after {
-    height: 35rem;
-  }
-    @media (max-width: 48rem) {
-        .tags-in-dactyl-container,
-        .tags-in-dactyl-container::before,
-        .tags-in-dactyl-container::after{
-            height: 20rem;
-            margin-bottom: 3rem;
-        }
-    }
-</style>
- <div class="
-    post-title-container
-        tags-in-dactyl tags-in-dactyl-container hero-hov
-  ">
-   <div class="heading-container hero-heading hero-heading-blog">
-     <h1>
-          <a href="/dactl/posts/tags-in-dactyl" title="Tags in dactl">Tags in dactl</a>
-     </h1>
-     <div class="
-        post-meta
-      ">
-        <span>18/03/2017</span>
-        <span>
-              <a href="/dactl/tag/dactl">#dactl</a>
-              <a href="/dactl/tag/howto">#howto</a>
-        </span>
-     </div>
-   </div>
- </div>
-     <p class="lead">Tags are built using Jekyll’s native categories functionality and you need to add them manually as files before using them in posts. Read on to learn how.
-<h2 id="how-to-add-a-new-tag">How to add a new tag</h2>
-<p>Please make sure to do the following for each tag:
-       <div class="readmore">
-          <a href="/dactl//posts/tags-in-dactyl" role="button">Read more</a>
-       <div>
-</article>
-<nav class="pagination" role="navigation">
-<hr/>
- <ul>
-   <li class="pagination-item-prev" >
-      <span>&laquo; Previous</span>
-   <li class="pagination-item-next" >
-      <a rel="next" href="/dactl//page-2/">Next &raquo;</a>
- </ul>
-<hr/>
-</nav>
-           <footer>
-    <span>this should contain a proper description
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <meta name="robots" content="noindex">
+  
+
+  <title>Jekyll-Uno</title>
+  <meta name="description" content="Jekyll-Uno - a minimal, responsive theme for Jekyll">
+  <meta name="author" content="Josh Gerdes">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jekyll-Uno">
+  <meta name="twitter:description" content="Jekyll-Uno - a minimal, responsive theme for Jekyll">
+  
+  <meta name="twitter:creator" content="joshgerdes">
+  
+  <meta name="twitter:image" content="/jekyll-uno/images/favicons/favicon-194x194.png" />
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Jekyll-Uno">
+  <meta property="og:description" content="Jekyll-Uno - a minimal, responsive theme for Jekyll">
+  <meta property="og:image" content="/jekyll-uno/images/favicons/favicon-194x194.png" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/jekyll-uno/images/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/jekyll-uno/images/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/jekyll-uno/images/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/jekyll-uno/images/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/jekyll-uno/images/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/jekyll-uno/images/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/jekyll-uno/images/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/jekyll-uno/images/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/jekyll-uno/images/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/jekyll-uno/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/jekyll-uno/images/favicons/favicon-194x194.png" sizes="194x194">
+  <link rel="icon" type="image/png" href="/jekyll-uno/images/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/jekyll-uno/images/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/jekyll-uno/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/jekyll-uno/images/favicons/manifest.json">
+  <link rel="shortcut icon" href="/jekyll-uno/images/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffc40d">
+  <meta name="msapplication-TileImage" content="/jekyll-uno/images/favicons/mstile-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  <link rel="stylesheet" href="/jekyll-uno/css/main.css?1536022559032751820">
+  <link rel="canonical" href="http://localhost:4000/jekyll-uno/">
+  <link rel="alternate" type="application/rss+xml" title="Jekyll-Uno" href="/jekyll-uno/feed.xml">
+</head>
+
+
+  <body>
+    <span class="mobile btn-mobile-menu">
+  <i class="icon icon-list btn-mobile-menu__icon"></i>
+  <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
 </span>
-    <span>written by Your Name</span>
-</footer>
-       </div>
-<script type="text/javascript" src="/dactl/assets/js/theme.js"></script>
-<script type="text/javascript" src="/dactl/assets/js/barefoot.js"></script>
+
+<header class="panel-cover" style="background-image: url(/jekyll-uno/images/cover.jpg)">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <a href="/jekyll-uno/" title="link to home of Jekyll-Uno">
+          <img src="/jekyll-uno/images/profile.jpg" class="user-image" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title">Jekyll-Uno</h1>
+        </a>
+        <hr class="panel-cover__divider">
+        <p class="panel-cover__description">Jekyll-Uno - a minimal, responsive theme for Jekyll</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary">
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="/jekyll-uno/#blog" title="link to Jekyll-Uno blog" class="blog-button">Blog</a></li>
+            </ul>
+          </nav>
+
+          <nav class="cover-navigation navigation--social">
+            <ul class="navigation">
+
+            
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/joshgerdes" title="@joshgerdes on Twitter" target="_blank">
+                  <i class="icon icon-social-twitter"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Facebook -->
+              <li class="navigation__item">
+                <a href="http://fb.me/joshgerdes" title="joshgerdes on Facebook" target="_blank">
+                  <i class="icon icon-social-facebook"></i>
+                  <span class="label">Facebook</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- LinkedIn -->
+              <li class="navigation__item">
+                <a href="https://www.linkedin.com/in/joshgerdes" title="joshgerdes on LinkedIn" target="_blank">
+                  <i class="icon icon-social-linkedin"></i>
+                  <span class="label">LinkedIn</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- GitHub -->
+              <li class="navigation__item">
+                <a href="https://www.github.com/joshgerdes" title="joshgerdes on GitHub" target="_blank">
+                  <i class="icon icon-social-github"></i>
+                  <span class="label">GitHub</span>
+                </a>
+              </li>
+            
+
+            
+              <!-- Email -->
+              <li class="navigation__item">
+                <a href="mailto:josh@joshgerdes.com" title="Email josh@joshgerdes.com" target="_blank">
+                  <i class="icon icon-mail"></i>
+                  <span class="label">Email</span>
+                </a>
+              </li>
+            
+
+            <!-- RSS -->
+            <li class="navigation__item">
+              <a href="/jekyll-uno/feed.xml" title="Subscribe" target="_blank">
+                <i class="icon icon-rss"></i>
+                <span class="label">RSS</span>
+              </a>
+            </li>
+
+            </ul>
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <div class="main-post-list">
+
+  <ol class="post-list">
     
+      <li>
+        <h2 class="post-list__post-title post-title"><a href="/jekyll-uno/2016/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></h2>
+        <p class="excerpt">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve --watch, which launches a web server and auto-regenerates your site when a file is updated.
+
+&hellip;</p>
+        <div class="post-list__meta">
+            <time datetime="2016-01-08 12:04" class="post-list__meta--date date">8 Jan 2016</time>
+            
+            &#8226; <span class="post-meta__tags">on <a href="/jekyll-uno/tags/#jekyll">jekyll</a> </span>
+            
+        </div>
+        <hr class="post-list__divider">
+      </li>
+    
+  </ol>
+
+  <hr class="post-list__divider ">
+
+  
+
+</div>
+
+      </div>
+
+      <footer class="footer">
+  <span class="footer__copyright">&copy; 2018 Josh Gerdes. All rights reserved.</span>
+</footer>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="/jekyll-uno/js/main.js?1536022559032751820"></script>
+
+
+    </div>
+  </body>
+</html>

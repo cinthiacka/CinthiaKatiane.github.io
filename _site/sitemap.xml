@@ -3,132 +3,9 @@
   
     
     <url>
-      <loc>http://localhost:4000/posts/welcome-to-dactl/</loc>
+      <loc>http://localhost:4000/2016/welcome-to-jekyll/</loc>
       
-        <lastmod>2017-03-22T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/posts/notices/</loc>
-      
-        <lastmod>2017-03-20T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/posts/config-settings/</loc>
-      
-        <lastmod>2017-03-20T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/posts/yaml-frontmatter/</loc>
-      
-        <lastmod>2017-03-19T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/posts/tags-in-dactyl/</loc>
-      
-        <lastmod>2017-03-18T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/posts/post-excerpts-lead-paragraphs/</loc>
-      
-        <lastmod>2017-03-17T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/posts/footnotes-in-dactl/</loc>
-      
-        <lastmod>2017-03-16T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/posts/example-content/</loc>
-      
-        <lastmod>2017-01-20T00:00:00-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.7</priority>
-      
-    </url>
-    
-  
-  
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/about/</loc>
-      
-        <lastmod>2018-09-03T21:17:51-03:00</lastmod>
+        <lastmod>2016-01-08T12:04:23-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -139,17 +16,35 @@
     </url>
     
   
+  
+    
+  
     
     <url>
-      <loc>http://localhost:4000/archive/</loc>
+      <loc>http://localhost:4000/feed.xml</loc>
       
-        <lastmod>2018-09-03T21:17:51-03:00</lastmod>
+        <lastmod>2018-09-03T21:55:59-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
       
       
-        <priority>0.9</priority>
+        <priority>0.3</priority>
+      
+    </url>
+    
+  
+    
+    <url>
+      <loc>http://localhost:4000/humans.txt</loc>
+      
+        <lastmod>2018-09-03T21:55:59-03:00</lastmod>
+      
+      
+        <changefreq>monthly</changefreq>
+      
+      
+        <priority>0.3</priority>
       
     </url>
     
@@ -160,38 +55,21 @@
   
     
     <url>
-      <loc>http://localhost:4000/</loc>
+      <loc>http://localhost:4000/css/main.css</loc>
       
-        <lastmod>2018-09-03T21:17:51-03:00</lastmod>
+        <lastmod>2018-09-03T21:55:59-03:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
       
       
-        <priority>0.5</priority>
+        <priority>0.3</priority>
       
     </url>
     
   
     
   
-    
-  
-    
-  
-    
-    <url>
-      <loc>http://localhost:4000/page-2/</loc>
-      
-        <lastmod>2018-09-03T21:17:51-03:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
     
   
 </urlset>
