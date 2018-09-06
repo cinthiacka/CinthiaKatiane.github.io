@@ -2,39 +2,96 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cinthia Katiane</title>
-    <description>Jekyll-Uno - a minimal, responsive theme for Jekyll</description>
+    <description>There is nothing like looking, if you want to find something  - J. R. R. Tolkien</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 03 Sep 2018 22:08:00 -0300</pubDate>
-    <lastBuildDate>Mon, 03 Sep 2018 22:08:00 -0300</lastBuildDate>
+    <pubDate>Tue, 04 Sep 2018 12:25:22 -0300</pubDate>
+    <lastBuildDate>Tue, 04 Sep 2018 12:25:22 -0300</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Fundamentos de IA</title>
+        <description>&lt;p&gt;Inteligencia Artificial é um tema que está passando por um periodo de grande hype com os estudos de Deep Learning, Chatbots inteligentes, Cidades Inteligentes, filmes de ficção cientifica, etc. Então vamos tentar entender alguns fundamentos da IA e que isso é algo bem mais proximo de nós do que você pensa.&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h3 id=&quot;algumas-definições-de-ia&quot;&gt;Algumas definições de IA&lt;/h3&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://google.com&quot;&gt;Barr &amp;amp; Feigenbaum - 1981&lt;/a&gt; 
+Inteligencia Artificial é a parte da Ciência da Computação que se preocupa em desenvolver sistemas inteligentes.&lt;/p&gt;
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://google.com&quot;&gt;Charniak &amp;amp; McDermott - 1987&lt;/a&gt;
+Inteligencia Artificial é o estudo de faculdades mentais através do uso de modelos computacionais.&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://google.com&quot;&gt;Winston - 1992&lt;/a&gt;
+Inteligencia Artificial é o estudo das computações que tornam possíveis percerber, raciocinar e agir.&lt;/p&gt;
+
+&lt;p&gt;Essas definições podem parecer conflitantes, devido aos diferentes focos apresentados. Afinal de contas, o que é Inteligencia Artificial? Atualmente a IA se divide em 4 segmentos diferentes, que podem ser divididos de acordo ideia de sistema inteligente.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt;Humano&lt;/th&gt;
+      &lt;th&gt;Racional&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pensamento&lt;/td&gt;
+      &lt;td&gt;Sistemas que pensam como seres humanos&lt;/td&gt;
+      &lt;td&gt;Sistemas que pensam racionalmente&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Comportamento&lt;/td&gt;
+      &lt;td&gt;Sistemas que agem como seres humanos&lt;/td&gt;
+      &lt;td&gt;Sistemas que agem racionalmente&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;paradigmas-da-ia&quot;&gt;Paradigmas da IA&lt;/h3&gt;
+
+&lt;p&gt;Duas abordagens inicias da IA são conexisnista e simbolica, essasn&lt;/p&gt;
+
+&lt;h4 id=&quot;simbolica&quot;&gt;Simbolica&lt;/h4&gt;
+
+&lt;p&gt;IA que pensa racionalmente&lt;/p&gt;
+
+&lt;p&gt;logica e representação do conhecimento - Apresenta um conhecimento explícito de um determinado problema e que também possui uma explicação do processo que levou a resposta dada pelo sistema de IA. O exemplo clássico da IA simbólica são os sistemas especialistas, que necessitam que o conhecimento sobre o problema seja definido manualmente no sistema para que ele possa raciocinar e tomar as decisões.&lt;/p&gt;
+
+&lt;p&gt;Sistemas especialistas&lt;/p&gt;
+
+&lt;p&gt;Conexionista&lt;/p&gt;
+
+&lt;p&gt;IA que pensa como humanos
+aprendizagem e simulação do cerebro - Esse conceito surgiu em 1943 e foi criado por McCulloch e Pitts, que fizeram a proposta do primeiro modelo matemático de um neurônio. Mais tarde, Rosenblatt criou o que hoje chamamos de redes neurais por meio da definição do Perceptron, que é um assunto obrigatório para ser estudado quando iniciamos o estudo sobre as redes neurais. No início, essa linha de pesquisa da IA não teve muitas contribuições pelo fato de que eram necessários muitos recursos de hardware que não estavam disponíveis na época. Com o problema do hardware resolvido atualmente, temos as chamadas redes profundas (deep learning) que podem ser consideradas uma grande evolução das redes neurais e estão presentes em vários softwares famosos de IA, tal como o Watson da IBM. Hoje em dia esse é um dos principais padrões de aprendizagem, o que acabaram deixando os produtos da IA simbólica de certa forma obsoletos.
+redes neurais&lt;/p&gt;
+&lt;h3 id=&quot;areas-envolvidas-na-ia&quot;&gt;Areas envolvidas na IA&lt;/h3&gt;
+
+&lt;p&gt;Matemática&lt;/p&gt;
+
+&lt;p&gt;Filosofia&lt;/p&gt;
+
+&lt;p&gt;Computação&lt;/p&gt;
+
+&lt;p&gt;Psicologia&lt;/p&gt;
+
+&lt;p&gt;Linguística&lt;/p&gt;
+
+&lt;h3 id=&quot;aplicações-da-ia&quot;&gt;Aplicações da IA&lt;/h3&gt;
+
+&lt;p&gt;Para comentários e sugestões contate-me via &lt;a href=&quot;http://jekyllrb.com&quot;&gt;email&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 08 Jan 2016 12:04:23 -0300</pubDate>
-        <link>http://localhost:4000/2016/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/welcome-to-jekyll/</guid>
+        <pubDate>Mon, 03 Sep 2018 19:39:23 -0300</pubDate>
+        <link>http://localhost:4000/2018/fundamentos-de-IA/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/fundamentos-de-IA/</guid>
         
-        <category>jekyll</category>
+        <category>IA</category>
         
         
-        <category>jekyll</category>
+        <category>IA</category>
+        
+        <category>FUNDAMENTOS</category>
         
       </item>
     
