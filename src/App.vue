@@ -1,9 +1,7 @@
 <template>
-  <v-app>
+  <v-app id='app'>
     <core-toolbar />
-
     <core-view />
-
     <core-footer />
   </v-app>
 </template>
@@ -17,3 +15,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+  @import url("./assets/css/colors.css");
+</style>
+
