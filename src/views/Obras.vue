@@ -7,28 +7,23 @@
           <v-card class="card-float d-inline-block" width="85%" elevation="0">
             <div>
               <div class="wrapper">
-                 <v-tabs
-                    centered
-                  >
-                    <v-tab>Tudo</v-tab>
-                    <v-tab>Arte Digital</v-tab>
-                    <v-tab>Desenho</v-tab>
-                    <v-tab>Pintura</v-tab>
+                 <v-tabs centered class="title" v-model="tab">
+                    <v-tab @click="filtro('arte')">Tudo</v-tab>
+                    <v-tab @click="filtro('digital')">Arte Digital</v-tab>
+                    <v-tab @click="filtro('desenho')">Desenho</v-tab>
+                    <v-tab @click="filtro('pintura')">Pintura</v-tab>
                   </v-tabs>
-
                   <p v-if="loading" class="text-centered">
                     Carregando...
                   </p>
-                  
                   <ul v-else class="image-card-grid">
                     <image-card
-                      v-for="image in cleanImages"
+                      v-for="image in gallery"
                       :key="image.id"
-                      :image="image" />
+                      :image="image"/>
                   </ul>
               </div>
             </div>
-
             <Footer/> 
           </v-card>
         </v-col>
@@ -53,25 +48,42 @@ export default {
   },
   data() {
     return {
+      tab:null,
       loading: false,
       tag: '',
-      images: []
+      images: [],
+      gallery:[]
     }
   },
   created(){
     this.search();
   },
-  computed: {
-    cleanImages() {
-      return this.images.filter(image => image.url_n)
-    }
-  },
+ 
   methods: {
+    filtro(tag) {
+      this.gallery = [];
+      this.images.forEach(element => {
+        if (element.tags.includes(tag)) { 
+          this.gallery.push(
+            {
+              id: element.id, 
+              title: element.title, 
+              photo: element.url_o, 
+              description: element.description._content, 
+              tags: element.tags, 
+              is_square:element.tags.includes("1x1"), 
+              is_retangle:element.tags.includes("2x1")
+            });
+          }
+        });
+      return this.gallery;
+    },
     search() {
       this.loading = true;
       this.fetchImages()
         .then((response) => {
           this.images = response.data.photos.photo;
+          this.filtro('arte');
           this.loading = false;
         })
     },
@@ -83,7 +95,7 @@ export default {
           method: 'flickr.people.getPhotos',
           api_key: config.api_key,
           user_id:'190705422@N04',
-          extras: 'url_n, owner_name, date_taken, views',
+          extras: 'url_o, owner_name, date_taken, views, tags, description',
           page: 1,
           format: 'json',
           nojsoncallback: 1,
@@ -101,12 +113,16 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/icon?family=Poppins");
 
+.title{
+  font-family: Poppins, sans-serif !important;
+
+}
 .imagem-format{
   border-radius: 50%!important;
 }
 
 .card-float{ 
-  margin-top: 10vh;
+  margin-top: 0vh;
   margin-bottom: 10vh;
 }
 

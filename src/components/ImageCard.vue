@@ -1,14 +1,16 @@
 
 <template>
-   <li class="image-card">
-    <img class="image-card__image" :src="image.url_n" :alt="image.title">
+   <li :class="{ 'image-card--1': image.is_square, 'image-card--2': image.is_retangle }"> 
+    <img class="image-card__image" :src="image.photo" :alt="image.title">
     <div class="image-card__body">
-      <p v-if="image.title" class="image-title">{{image.title}}</p>
-      <p v-else class="image-title">No Title Found</p>
-      <section class="image-date-view-wrapper">
-        <p class="image-date">{{image.datetaken}}</p>
-        <p class="image-views">Views: {{image.views}}</p>
-      </section>
+      <div v-if="image.title" class="image-title">
+        {{image.title}}
+        <br>
+        <div class="image-description">
+        {{image.description}} 
+        </div>
+      </div>
+      <div v-else class="image-title">Sem Título</div>
     </div>
   </li>
 </template>
@@ -22,9 +24,12 @@ export default {
 
 
 <style scoped>
-.image-card {
-    position: relative;
-    
+@import url("https://fonts.googleapis.com/icon?family=Poppins");
+
+.image-card--1 {
+
+  max-height: 500px;
+  position: relative;  
   width: calc(33% - 1rem);
   margin: .5rem;
   border-radius: 5px;
@@ -38,8 +43,28 @@ export default {
     margin: .5rem 0;
   }
 }
+
+.image-card--2 {
+  max-height: 500px;
+  position: relative;  
+  width: calc(66% - 1rem);
+  margin: .5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
+  background: white;
+  @media only screen and (max-width: 799px) {
+    width: calc(50% - 1rem);
+  }
+  @media only screen and (max-width: 549px) {
+    width: 100%;
+    margin: .5rem 0;
+  }
+}
 .image-card__image {
-display: block;
+  
+  transition: transform .2s; /* Animation */
+  max-height: 480px;
+  display: block;
   border-radius: 5px 5px 0 0;
   width: 100%;
   height: auto;
@@ -48,21 +73,29 @@ display: block;
 .image-card__body {
   padding: .5rem 1rem 1rem;
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100%;
+  height: 20%;
   width: 100%;
   opacity: 0;
   transition: .5s ease;
   background-color: #008CBA;
 }
-
-.image-card:hover .image-card__body {
-  opacity: 0.7;
+.image-card--1:hover,.image-card--2:hover {
+   transform: scale(1.2);
+   z-index: 1;
 }
+
+.image-card--1:hover .image-card__body {
+  opacity: 0.8;
+}
+.image-card--2:hover .image-card__body {
+  opacity: 0.8;
+}
+
 .image-title {
+  font-family: Poppins, sans-serif !important;
   font-weight: bold;
   margin: 0;
    color: white;
@@ -74,6 +107,14 @@ display: block;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.image-description {
+  font-family: Poppins, sans-serif !important;
+  font-weight: regular !important;
+  margin: 0;
+  position: contents;
+  color: white;
+  font-size: 15px;
 }
 .image-owner {
   margin-top: 0;
