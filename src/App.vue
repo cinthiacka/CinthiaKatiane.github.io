@@ -1,23 +1,18 @@
 <template>
-  <v-app id='app'>
-    <core-toolbar />
-    <core-view />
-    <core-footer />
+  <v-app>
+    <v-content>
+      <router-view></router-view>
+    </v-content>
   </v-app>
 </template>
 
 <script>
+
 export default {
-  components: {
-    CoreFooter: () => import('@/components/core/Footer'),
-    CoreToolbar: () => import('@/components/core/Toolbar'),
-    CoreView: () => import('@/components/core/View')
-  }
-}
+  name: 'App',
+  // TO DO - substitui o home por router
+  data: () => ({
+    //
+  }),
+};
 </script>
-
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
-  @import url("./assets/css/colors.css");
-</style>
-
