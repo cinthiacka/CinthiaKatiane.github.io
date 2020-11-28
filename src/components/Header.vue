@@ -6,7 +6,7 @@
       elevation="3"
       height="95"
     >
-      <v-toolbar-title class="d-flex align-center logo">
+      <v-toolbar-title class="d-flex align-center logo" to='/'>
         <v-icon color="#000" class="ma-3">
           fa-palette
         </v-icon>
@@ -29,7 +29,7 @@
           <v-tab
             v-for="item in items"
             :key="item.nome"  
-            :href="item.link"
+            :to="item.link"
             active-class="text--primary"
             class="font-weight-bold subtitle"
             min-width="96"
@@ -51,12 +51,8 @@ export default {
     drawer: null,
       items: [
         {
-          nome:'Início',
+          nome: 'Portfólio',
           link: '/'
-        },
-        {
-          nome: 'Obras',
-          link: '/obras'
         },
         {
           nome: 'Sobre mim & Contato',

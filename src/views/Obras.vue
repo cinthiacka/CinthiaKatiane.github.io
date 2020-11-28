@@ -1,7 +1,31 @@
 <template>
-  <div class="p-0">
+  <div id='portfolio' class="p-0">
     <Header/>
-    <section id="welcome" class='p-0 m-0 welcome'>
+    <section id="welcome" class='p-0 m-0 '>
+        <v-layout
+          align-center
+          column
+          justify-start m-0 p-0
+        >
+          <div class="mb-1 title">Cinthia Katiane</div>
+          <div class="subtitle">Portfólio de Artes Visuais</div>
+          <div class="subtitle mt-5">
+            <v-btn
+              class="mx-2"
+              color="white"
+              fab
+              large
+              href="#work"
+            >
+              <v-icon dark>
+                mdi-menu-down-outline
+              </v-icon>
+            </v-btn>
+          </div>
+        </v-layout>
+      
+    </section>
+    <section id="work" class='p-0 m-0 welcome'>
       <v-row>
         <v-col align="center" justify="center">
           <v-card class="card-float d-inline-block" width="85%" elevation="0">
@@ -24,10 +48,10 @@
                   </ul>
               </div>
             </div>
-            <Footer/> 
           </v-card>
         </v-col>
       </v-row>
+      <Footer/> 
     </section>
   </div>
 </template>
@@ -113,35 +137,29 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/icon?family=Poppins");
 
+.welcome{
+  height: 90vh !important;
+}
 .title{
+  margin-top: 2em;
+  font-size: 3em!important;
   font-family: Poppins, sans-serif !important;
-
+  font-weight: 900;
+  color: black!important;
 }
-.imagem-format{
-  border-radius: 50%!important;
+.subtitle{
+  font-size: 1.2em;
+  font-family: Poppins, sans-serif;
+  font-weight: 50;
+  color: black;
 }
-
 .card-float{ 
   margin-top: 0vh;
   margin-bottom: 10vh;
 }
-
-.views{
-  background-color:#F1F1F1;
-  height: 75vh !important;
-}
-
-.screen-reader-only {
-  height: 1px;
-  width: 1px;
-  position: absolute;
-  left: -100000px;
-}
-
 .text-centered {
   text-align: center;
 }
-
 .wrapper {
   padding: 3em;
   margin: 0 auto;
