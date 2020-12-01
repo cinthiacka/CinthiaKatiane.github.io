@@ -27,7 +27,6 @@ export default {
 @import url("https://fonts.googleapis.com/icon?family=Poppins");
 
 .image-card--1 {
-
   max-height: 500px;
   position: relative;  
   width: calc(33% - 1rem);
@@ -98,7 +97,7 @@ export default {
   font-family: Poppins, sans-serif !important;
   font-weight: bold;
   margin: 0;
-   color: white;
+  color: white;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -107,6 +106,9 @@ export default {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .image-description {
   font-family: Poppins, sans-serif !important;
@@ -115,26 +117,6 @@ export default {
   position: contents;
   color: white;
   font-size: 15px;
-}
-.image-owner {
-  margin-top: 0;
-  font-size: .8rem;
-}
-.image-title,
-.image-owner {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.image-date-view-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.image-date,
-.image-views {
-  margin-bottom: 0;
-  font-size: .8rem;
 }
 </style>
 

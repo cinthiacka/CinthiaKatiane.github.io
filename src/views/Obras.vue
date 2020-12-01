@@ -2,37 +2,37 @@
   <div id='portfolio' class="p-0">
     <Header/>
     <section id="welcome" class='p-0 m-0 '>
-        <v-layout
-          align-center
-          column
-          justify-start m-0 p-0
-        >
-          <div class="mb-1 title">Cinthia Katiane</div>
-          <div class="subtitle">Portfólio de Artes Visuais</div>
-        </v-layout>
-      
+      <v-layout
+        align-center
+        column
+        justify-start m-0 p-0
+      >
+        <div class="mb-1 title">Cinthia Katiane</div>
+        <div class="subtitle">Portfólio de Artes Visuais</div>
+      </v-layout>
     </section>
+    
     <section id="work" class='p-0 m-0 welcome'>
       <v-row>
         <v-col align="center" justify="center">
           <v-card class="card-float d-inline-block" width="85%" elevation="0">
             <div>
               <div class="wrapper">
-                 <v-tabs centered class="title" v-model="tab">
-                    <v-tab @click="filtro('arte')">Tudo</v-tab>
-                    <v-tab @click="filtro('digital')">Arte Digital</v-tab>
-                    <v-tab @click="filtro('desenho')">Desenho</v-tab>
-                    <v-tab @click="filtro('pintura')">Pintura</v-tab>
-                  </v-tabs>
-                  <p v-if="loading" class="text-centered">
-                    Carregando...
-                  </p>
-                  <ul v-else class="image-card-grid">
-                    <image-card
-                      v-for="image in gallery"
-                      :key="image.id"
-                      :image="image"/>
-                  </ul>
+                <v-tabs centered class="title" v-model="tab">
+                  <v-tab @click="filtro('arte')">Tudo</v-tab>
+                  <v-tab @click="filtro('digital')">Arte Digital</v-tab>
+                  <v-tab @click="filtro('desenho')">Desenho</v-tab>
+                  <v-tab @click="filtro('pintura')">Pintura</v-tab>
+                </v-tabs>
+                <p v-if="loading" class="text-centered">
+                  Carregando...
+                </p>
+                <ul v-else class="image-card-grid">
+                  <image-card
+                    v-for="image in gallery"
+                    :key="image.id"
+                    :image="image"/>
+                </ul>
               </div>
             </div>
           </v-card>
@@ -46,8 +46,8 @@
 <script>
 import Header from '../components/Header.vue'
 import ImageCard from '../components/ImageCard.vue'
-import axios from 'axios';
 import Footer from '../components/Footer.vue';
+import axios from 'axios';
 
 export default {
   name: 'Obras',
@@ -116,9 +116,6 @@ export default {
   }
 }
 </script>
-
-
-
 
 <style scoped>
 @import url("https://fonts.googleapis.com/icon?family=Poppins");
