@@ -1,0 +1,39 @@
+{
+    "fullName": "Cinthia Katiane",
+    "artistName": "CKatiane",
+    "fst_role":"Portfólio",
+    "snd_role":"Sobre mim & Contato",
+    "socialMedia": {
+        "email": "cinthia.cka@gmail.com",
+        "instagram": "@_ckatiane",
+        "flickr_id": "190705422@N04"
+    },
+    "aboutMe": {
+        "title": "Sobre mim",
+        "text": "Eu sou Cinthia, sou uma jovem artista de Parnamirim. Me formei em Tecnologia da Informação e concilio a carreira de desenvolvedora web com a arte. Trabalho principalmente com arte tradicional em tela usando tinta acrílica e guache, e com desenho e pintura digital."
+    },
+    "formation": {
+        "title": "Formação",
+        "courses": {
+            "0": "Curso de Desenho: Descomplicando a estrutura humana - Alura",
+            "1": "Curso de Desenho: Descomplicando o desenho do rosto - Alura",
+            "2": "Colorização Digital : técnicas de colorização e iluminação - Alura",
+            "3": "Pintura Digital: Pintando através do reconhecimento de valores - Alura"
+        }
+    },
+    "skillSet": {
+        "title": "Habilidades",
+        "skills": {
+            "0": "Inglês fluente;",
+            "1": "Kryta para pintura digital;",
+            "2": "Pintura com guache;",
+            "3": "Pintura com tinta acrílica."
+        }    
+    },
+    "experience": {
+        "title": "Experiência",
+        "experiences": {
+            "0": "Kairós"
+        }
+    }
+}
