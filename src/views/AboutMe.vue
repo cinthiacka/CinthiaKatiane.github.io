@@ -14,20 +14,7 @@
             Brasil, 24. Parnamirim-RN.
             <br>
             Desenvolvedora Web Front End e Pintora</div>
-          <div class="subtitle mt-5">
-            <v-btn
-              class="mx-2"
-              color="white"
-              fab
-              large
-              href="#work"
-            >
-              <v-icon dark>
-                mdi-menu-down-outline
-              </v-icon>
-            </v-btn>
-          </div>
-        </v-layout>
+         </v-layout>
     </section>
 
    <section id="work" class='p-0 m-0 welcome'>
@@ -83,11 +70,6 @@ import Footer from '../components/Footer.vue';
       Header,
       Footer
     },
-    data(){
-      return {
-        testando: require("../assets/me6.jpg")
-      }
-    }
   }
 </script>
 

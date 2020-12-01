@@ -9,19 +9,6 @@
         >
           <div class="mb-1 title">Cinthia Katiane</div>
           <div class="subtitle">Portfólio de Artes Visuais</div>
-          <div class="subtitle mt-5">
-            <v-btn
-              class="mx-2"
-              color="white"
-              fab
-              large
-              href="#work"
-            >
-              <v-icon dark>
-                mdi-menu-down-outline
-              </v-icon>
-            </v-btn>
-          </div>
         </v-layout>
       
     </section>
@@ -59,7 +46,6 @@
 <script>
 import Header from '../components/Header.vue'
 import ImageCard from '../components/ImageCard.vue'
-import config from '../../public/config';
 import axios from 'axios';
 import Footer from '../components/Footer.vue';
 
@@ -117,8 +103,8 @@ export default {
         url: 'https://api.flickr.com/services/rest',
         params: {
           method: 'flickr.people.getPhotos',
-          api_key: config.api_key,
-          user_id:'190705422@N04',
+          api_key: process.env.API_KEY,
+          user_id: process.env.USER_ID,
           extras: 'url_o, owner_name, date_taken, views, tags, description',
           page: 1,
           format: 'json',
@@ -162,6 +148,7 @@ export default {
 }
 .wrapper {
   padding: 3em;
+  padding-top: 0px;
   margin: 0 auto;
   @media only screen and (max-width: 799px) {
     max-width: 100%;

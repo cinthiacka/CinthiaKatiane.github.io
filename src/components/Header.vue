@@ -21,9 +21,8 @@
 
       <v-spacer></v-spacer>
 
-      <div>
+      <div v-if="$vuetify.breakpoint.mdAndUp">
         <v-tabs
-          class="hidden-sm-and-down"
           optional
         >
           <v-tab
@@ -37,7 +36,37 @@
           >
             {{ item.nome }}
           </v-tab>
+
         </v-tabs>
+      </div>
+      <div v-else>
+        <v-menu
+            bottom
+            left
+          >
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn
+                icon
+                color="black"
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-icon>mdi-menu</v-icon>
+              </v-btn>
+            </template>
+
+            <v-list>
+              <v-list-item
+              v-for="item in items"
+              :key="item.nome"  
+              :to="item.link"
+              active-class="text--primary"
+              class="font-weight-bold subtitle"
+              >
+                <v-list-item-title>{{ item.nome }}</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
       </div>
     </v-app-bar>
 </template>

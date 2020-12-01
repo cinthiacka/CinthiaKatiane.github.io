@@ -80,7 +80,7 @@ export default {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #008CBA;
+  background-color: #ee44aa;
 }
 .image-card--1:hover,.image-card--2:hover {
    transform: scale(1.2);
