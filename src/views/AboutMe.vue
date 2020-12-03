@@ -2,51 +2,39 @@
   <div class="p-0">
     <Header/>
     <section id="welcome" class='p-0 m-0 '>
-        <v-layout
-          align-center
-          column
-          justify-start m-0 p-0
-        >
-          <div class="mb-1 title">Cinthia Katiane</div>
-          <div class="subtitle">
-            cinthia.cka@gmail.com
-            <br>
-            Brasil, 24. Parnamirim-RN.
-            <br>
-            Desenvolvedora Web Front End e Pintora</div>
-         </v-layout>
+      <v-layout align-center column justify-start m-0 p-0>
+        <div class="mb-1 title">{{info.nome}}</div>
+        <div class="subtitle"> {{info.pagina_2}} </div>
+        <br>
+      </v-layout>  
     </section>
 
-   <section id="work" class='p-0 m-0 welcome'>
+    <section id="work" class='p-0 m-0 welcome'>
       <v-row>
         <v-col align="center" justify="center">
           <v-card class="card-float d-inline-block" width="85%" elevation="0">
+            <br>
+            <hr>
             <div>
               <div class="wrapper">
-          
-              <div class="title">Sobre mim</div>
+              <div class="topic">{{info.sobre_mim.titulo}}</div>
               <div class="subtitle">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                {{info.sobre_mim.texto}}
               </div>
-              <div class="title">Formação</div>
-              <div class="subtitle">
-                • Curso de Desenho: Descomplicando a estrutura humana - Alura <br>
-                • Curso de Desenho: Descomplicando o desenho do rosto - Alura <br>
-                • Colorização Digital : técnicas de colorização e iluminação - Alura <br>
-                • Pintura Digital: Pintando através do reconhecimento de valores - Alura <br>
-
-              </div>
-              <div class="title">Principais Habilidades:</div>
-              <div class="subtitle">
-                • Inglês fluente; <br>
-                • Kryta para pintura digital; <br>
-                • Pintura com guache; <br>
-                • Pintura com tinta acrílica.
-   
+              
+              <div class="topic">{{info.formacao.titulo}}</div>
+              <div v-for="item in info.formacao.topicos" :key='item' class="subtitle">
+                {{item}}
               </div>      
-              <div class="title">Principais Experiências:</div>
-              <div class="subtitle">
-                Kairós
+
+              <div class="topic">{{info.habilidades.titulo}}</div>
+              <div v-for="item in info.habilidades.topicos" :key='item' class="subtitle">
+                {{item}}
+              </div>      
+
+              <div class="topic">{{info.experiencia.titulo}}</div>
+              <div v-for="item in info.experiencia.topicos" :key='item' class="subtitle">
+                {{item}}
               </div>      
 
               </div>
@@ -56,7 +44,6 @@
       </v-row>
       <Footer/>
     </section>
-    
   </div>
 </template>
 
@@ -70,6 +57,11 @@ import Footer from '../components/Footer.vue';
       Header,
       Footer
     },
+    data(){
+      return{
+        info: require("../../data.json"),
+      }
+    }
   }
 </script>
 
@@ -86,6 +78,13 @@ import Footer from '../components/Footer.vue';
   font-weight: 900;
   color: black!important;
 }
+.topic{
+  margin-top: 2em;
+  font-size: 2em!important;
+  font-family: Poppins, sans-serif !important;
+  font-weight: 900;
+  color: black!important;
+}
 .subtitle{
   font-size: 1.2em;
   font-family: Poppins, sans-serif;
@@ -94,6 +93,7 @@ import Footer from '../components/Footer.vue';
 }
 .wrapper {
   padding: 3em;
+  padding-top: 0;
   margin: 0 auto;
   @media only screen and (max-width: 799px) {
     max-width: 100%;

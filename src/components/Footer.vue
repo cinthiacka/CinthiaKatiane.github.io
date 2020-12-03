@@ -5,21 +5,12 @@
             <hr>
             <v-card-actions>
                 <v-col align="center" justify="center">
-                <v-btn icon href="https://www.instagram.com/" target="_blank">
-                    <v-icon>mdi-instagram</v-icon>
-                </v-btn>
-                <v-btn icon href="https://twitter.com/cinthiakatiane" target="_blank">
-                    <v-icon>mdi-twitter</v-icon>
-                </v-btn>
-                <v-btn icon href="https://medium.com/@cinthia.cka" target="_blank">
-                    <v-icon>mdi-medium</v-icon>
-                </v-btn>
-                <v-btn icon href="https://www.linkedin.com/in/cinthiakatiane/" target="_blank">
-                    <v-icon>mdi-linkedin-box</v-icon>
-                </v-btn>
-                <v-btn icon href="mailto:cinthia.cka@gmail.com" target="_blank">
-                    <v-icon>mdi-email</v-icon>
-                </v-btn>
+                    Criado e desenvolvido por <strong> Cinthia Katiane </strong>
+                </v-col>
+                <v-col align="center" justify="center">
+                    <v-btn v-for="item in file.redes_sociais" icon :key="item.icon" :href="item.url" target="_blank">
+                        <v-icon>{{item.icon}}</v-icon>
+                    </v-btn>
                 </v-col>
             </v-card-actions>
             </v-card>
@@ -30,6 +21,11 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data(){
+      return {
+          file: require("../../data.json")
+      }
+  }
 }
 </script>

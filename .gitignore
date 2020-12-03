@@ -4,7 +4,7 @@ dist/
 npm-debug.log
 yarn-error.log
 .env
-
+data.json
 # Editor directories and files
 .idea
 *.suo

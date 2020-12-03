@@ -11,11 +11,11 @@
         fa-palette
       </v-icon>
       <div class="title ma-3">
-        CKatiane  
+        {{file.nome_artistico}}  
       </div>
       <div style="margin-left: 0.6em; margin-right: 1em;"> | </div>
       <div class="subtitle">
-        Portfólio Online
+        {{file.area}}
       </div>
     </v-toolbar-title>
 
@@ -75,6 +75,7 @@ export default {
   name: 'Header',
 
   data: () => ({
+    file: require("../../data.json"),
     drawer: null,
       items: [
         {

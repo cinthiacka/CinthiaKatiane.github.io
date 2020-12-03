@@ -10,7 +10,6 @@
 
 export default {
   name: 'App',
-  // TO DO - substitui o home por router
   data: () => ({
     //
   }),

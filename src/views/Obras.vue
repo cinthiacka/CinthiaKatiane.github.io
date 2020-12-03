@@ -7,8 +7,9 @@
         column
         justify-start m-0 p-0
       >
-        <div class="mb-1 title">Cinthia Katiane</div>
-        <div class="subtitle">Portfólio de Artes Visuais</div>
+        <div class="mb-1 title">{{file.nome}}</div>
+        <div class="subtitle">{{file.pagina_1}}</div>
+        <br>
       </v-layout>
     </section>
     
@@ -17,12 +18,11 @@
         <v-col align="center" justify="center">
           <v-card class="card-float d-inline-block" width="85%" elevation="0">
             <div>
+              <br>
+            <hr>
               <div class="wrapper">
                 <v-tabs centered class="title" v-model="tab">
-                  <v-tab @click="filtro('arte')">Tudo</v-tab>
-                  <v-tab @click="filtro('digital')">Arte Digital</v-tab>
-                  <v-tab @click="filtro('desenho')">Desenho</v-tab>
-                  <v-tab @click="filtro('pintura')">Pintura</v-tab>
+                  <v-tab v-for="item in file.tags" :key="item" @click="filtro(item.tag)">{{item.titulo}}</v-tab>
                 </v-tabs>
                 <p v-if="loading" class="text-centered">
                   Carregando...
@@ -31,7 +31,8 @@
                   <image-card
                     v-for="image in gallery"
                     :key="image.id"
-                    :image="image"/>
+                    :image="image"
+                    />
                 </ul>
               </div>
             </div>
@@ -58,6 +59,7 @@ export default {
   },
   data() {
     return {
+      file: require("../../data.json"),
       tab:null,
       loading: false,
       tag: '',
@@ -81,6 +83,7 @@ export default {
               photo: element.url_o, 
               description: element.description._content, 
               tags: element.tags, 
+              url: element.path_alias,
               is_square:element.tags.includes("1x1"), 
               is_retangle:element.tags.includes("2x1")
             });
@@ -103,9 +106,9 @@ export default {
         url: 'https://api.flickr.com/services/rest',
         params: {
           method: 'flickr.people.getPhotos',
-          api_key: process.env.API_KEY,
-          user_id: process.env.USER_ID,
-          extras: 'url_o, owner_name, date_taken, views, tags, description',
+          api_key: process.env.VUE_APP_API_KEY,
+          user_id: process.env.VUE_APP_USER_ID,
+          extras: 'url_o, path_alias, owner_name, date_taken, views, tags, description',
           page: 1,
           format: 'json',
           nojsoncallback: 1,

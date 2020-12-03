@@ -4,7 +4,9 @@
     <img class="image-card__image" :src="image.photo" :alt="image.title">
     <div class="image-card__body">
       <div v-if="image.title" class="image-title">
-        {{image.title}}
+        <a :href="image.photo" target="_blank">
+          {{image.title}} 
+        </a>
         <br>
         <div class="image-description">
         {{image.description}} 
@@ -92,8 +94,11 @@ export default {
 .image-card--2:hover .image-card__body {
   opacity: 0.8;
 }
-
-.image-title {
+a{
+  text-decoration: none;
+  color: white !important;;
+}
+.image-title  {
   font-family: Poppins, sans-serif !important;
   font-weight: bold;
   margin: 0;
