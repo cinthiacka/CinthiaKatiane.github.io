@@ -17,26 +17,55 @@
             <hr>
             <div>
               <div class="wrapper">
-              <div class="topic">{{info.sobre_mim.titulo}}</div>
-              <div class="subtitle">
-                {{info.sobre_mim.texto}}
-              </div>
+                <div class="topic">{{info.sobre_mim.titulo}}</div>
+                <div class="subtitle">
+                  {{info.sobre_mim.texto}}
+                </div>
               
-              <div class="topic">{{info.formacao.titulo}}</div>
-              <div v-for="item in info.formacao.topicos" :key='item' class="subtitle">
-                {{item}}
-              </div>      
+                <div class="topic">{{info.formacao.titulo}}</div>
+                <div v-for="item in info.formacao.topicos" :key='item' class="subtitle">
+                  {{item}}
+                </div>      
 
-              <div class="topic">{{info.habilidades.titulo}}</div>
-              <div v-for="item in info.habilidades.topicos" :key='item' class="subtitle">
-                {{item}}
-              </div>      
+                <div class="topic">{{info.habilidades.titulo}}</div>
+                <div v-for="item in info.habilidades.topicos" :key='item' class="subtitle">
+                  {{item}}
+                </div>      
 
-              <div class="topic">{{info.experiencia.titulo}}</div>
-              <div v-for="item in info.experiencia.topicos" :key='item' class="subtitle">
-                {{item}}
-              </div>      
+                <div class="topic">{{info.experiencia.titulo}}</div>
+                <div v-for="item in info.experiencia.topicos" :key='item' class="subtitle">
+                  {{item}}
+                </div>      
 
+                <div class="highlight">
+                  <div class="topic">Contato</div>
+                  <div>
+                    <v-row>
+                      <v-col cols="12" sm="6">
+                        <v-text-field v-model="first" label="Nome" outlined ></v-text-field>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-text-field label="Email" outlined></v-text-field>
+                      </v-col>
+                    </v-row>
+                    <v-col col="12" class="pa-0">
+                      <v-textarea outlined>
+                        <template v-slot:label>
+                          <div> Mensagem </div>
+                        </template>
+                      </v-textarea>
+                    </v-col>
+                  
+                    <v-row>
+                      <v-col cols="12" sm="6">
+                        <v-btn outlined type="submit" value="Send">Enviar</v-btn>
+                      </v-col>
+                      <v-col cols="12" sm="6">
+                        <v-btn outlined type="reset" value="Reset">Resetar</v-btn>
+                      </v-col>
+                    </v-row>
+                  </div>
+                </div>
               </div>
             </div>
           </v-card>
@@ -79,7 +108,7 @@ import Footer from '../components/Footer.vue';
   color: black!important;
 }
 .topic{
-  margin-top: 2em;
+  margin: 1em;
   font-size: 2em!important;
   font-family: Poppins, sans-serif !important;
   font-weight: 900;
@@ -90,6 +119,13 @@ import Footer from '../components/Footer.vue';
   font-family: Poppins, sans-serif;
   font-weight: 50;
   color: black;
+}
+.highlight{
+  border: 5px solid black;
+  color: white;
+  margin:2em;
+  margin-top: 5em;
+  padding: 2em;
 }
 .wrapper {
   padding: 3em;

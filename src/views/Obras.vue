@@ -83,7 +83,6 @@ export default {
               photo: element.url_o, 
               description: element.description._content, 
               tags: element.tags, 
-              url: element.path_alias,
               is_square:element.tags.includes("1x1"), 
               is_retangle:element.tags.includes("2x1")
             });
@@ -108,7 +107,7 @@ export default {
           method: 'flickr.people.getPhotos',
           api_key: process.env.VUE_APP_API_KEY,
           user_id: process.env.VUE_APP_USER_ID,
-          extras: 'url_o, path_alias, owner_name, date_taken, views, tags, description',
+          extras: 'url_o, tags, description',
           page: 1,
           format: 'json',
           nojsoncallback: 1,
