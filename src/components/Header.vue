@@ -8,7 +8,7 @@
   >
     <v-toolbar-title class="d-flex align-center logo" to='/'>
       <v-icon color="#000" class="ma-3">
-        fa-palette
+        {{file.icone_cabecalho}}
       </v-icon>
       <div class="title ma-3">
         {{file.nome_artistico}}  
@@ -83,8 +83,12 @@ export default {
           link: '/'
         },
         {
-          nome: 'Sobre mim & Contato',
+          nome: 'Sobre mim',
           link: '/sobremim'
+        },
+        {
+          nome: 'Contato',
+          link: '/contato'
         }
       ],
   }),

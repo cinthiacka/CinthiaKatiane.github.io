@@ -8,7 +8,6 @@
         justify-start m-0 p-0
       >
         <div class="mb-1 title">{{file.nome}}</div>
-        <div class="subtitle">{{file.pagina_1}}</div>
         <br>
       </v-layout>
     </section>
@@ -21,8 +20,38 @@
               <br>
             <hr>
               <div class="wrapper">
-                <v-tabs centered class="title" v-model="tab">
-                  <v-tab v-for="item in file.tags" :key="item" @click="filtro(item.tag)">{{item.titulo}}</v-tab>
+                <v-row justify="center">
+                  <v-dialog
+                    v-model="open_gallery"
+                    max-width="90%"
+                  >
+                    <v-card>
+                      <v-toolbar
+                        flat
+                        dark
+                        color="primary"
+                      >
+                        
+                        <v-toolbar-title class="headline">{{selected_image.title}} - {{selected_image.description}} </v-toolbar-title>
+                        <v-spacer></v-spacer>
+                        <v-btn
+                          icon
+                          dark
+                          @click="open_gallery = false"
+                        >
+                          <v-icon>mdi-close</v-icon>
+                        </v-btn>
+                      </v-toolbar>
+
+
+                      <v-card-actions>
+                        <v-img max-height="900" contain :src="selected_image.photo"></v-img>
+                      </v-card-actions>
+                    </v-card>
+                  </v-dialog>
+                </v-row>
+                <v-tabs centered class="title" v-model="tab" :color="file.cor_destaque">
+                  <v-tab v-for="item in file.tags" :key="item.tag" @click="filtro(item.tag)">{{item.titulo}}</v-tab>
                 </v-tabs>
                 <p v-if="loading" class="text-centered">
                   Carregando...
@@ -32,9 +61,11 @@
                     v-for="image in gallery"
                     :key="image.id"
                     :image="image"
+                    @open_image="open(image)"
                     />
                 </ul>
               </div>
+              
             </div>
           </v-card>
         </v-col>
@@ -45,8 +76,8 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import ImageCard from '../components/ImageCard.vue'
+import Header from '../components/Header.vue';
+import ImageCard from '../components/ImageCard.vue';
 import Footer from '../components/Footer.vue';
 import axios from 'axios';
 
@@ -55,10 +86,12 @@ export default {
   components: {
     Header,
     ImageCard,
-    Footer
+    Footer,
   },
   data() {
     return {
+      selected_image:null,
+      open_gallery: false,
       file: require("../../data.json"),
       tab:null,
       loading: false,
@@ -72,6 +105,10 @@ export default {
   },
  
   methods: {
+    open(img){
+      this.open_gallery = true;
+      this.selected_image = img; 
+    },
     filtro(tag) {
       this.gallery = [];
       this.images.forEach(element => {
@@ -88,6 +125,7 @@ export default {
             });
           }
         });
+      this.selected_image  = this.gallery[0];
       return this.gallery;
     },
     search() {
@@ -146,7 +184,7 @@ export default {
   text-align: center;
 }
 .wrapper {
-  padding: 3em;
+  padding: 0em;
   padding-top: 0px;
   margin: 0 auto;
   @media only screen and (max-width: 799px) {

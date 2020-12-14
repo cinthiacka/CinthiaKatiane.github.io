@@ -4,7 +4,6 @@
     <section id="welcome" class='p-0 m-0 '>
       <v-layout align-center column justify-start m-0 p-0>
         <div class="mb-1 title">{{info.nome}}</div>
-        <div class="subtitle"> {{info.pagina_2}} </div>
         <br>
       </v-layout>  
     </section>
@@ -15,8 +14,9 @@
           <v-card class="card-float d-inline-block" width="85%" elevation="0">
             <br>
             <hr>
-            <div>
-              <div class="wrapper">
+            <v-row>
+              <v-col cols="6"
+              align="start" justify="center" class="wrapper">
                 <div class="topic">{{info.sobre_mim.titulo}}</div>
                 <div class="subtitle">
                   {{info.sobre_mim.texto}}
@@ -36,38 +36,11 @@
                 <div v-for="item in info.experiencia.topicos" :key='item' class="subtitle">
                   {{item}}
                 </div>      
-
-                <div class="highlight">
-                  <div class="topic">Contato</div>
-                  <div>
-                    <v-row>
-                      <v-col cols="12" sm="6">
-                        <v-text-field v-model="first" label="Nome" outlined ></v-text-field>
-                      </v-col>
-                      <v-col cols="12" sm="6">
-                        <v-text-field label="Email" outlined></v-text-field>
-                      </v-col>
-                    </v-row>
-                    <v-col col="12" class="pa-0">
-                      <v-textarea outlined>
-                        <template v-slot:label>
-                          <div> Mensagem </div>
-                        </template>
-                      </v-textarea>
-                    </v-col>
-                  
-                    <v-row>
-                      <v-col cols="12" sm="6">
-                        <v-btn outlined type="submit" value="Send">Enviar</v-btn>
-                      </v-col>
-                      <v-col cols="12" sm="6">
-                        <v-btn outlined type="reset" value="Reset">Resetar</v-btn>
-                      </v-col>
-                    </v-row>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </v-col>
+              <v-col cols="6"> 
+                <v-img :src="photo"></v-img>
+              </v-col>
+            </v-row>
           </v-card>
         </v-col>
       </v-row>
@@ -89,6 +62,7 @@ import Footer from '../components/Footer.vue';
     data(){
       return{
         info: require("../../data.json"),
+        photo: require("../assets/profile.jpg")
       }
     }
   }
@@ -128,7 +102,7 @@ import Footer from '../components/Footer.vue';
   padding: 2em;
 }
 .wrapper {
-  padding: 3em;
+  padding: 1em;
   padding-top: 0;
   margin: 0 auto;
   @media only screen and (max-width: 799px) {

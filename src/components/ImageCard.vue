@@ -1,12 +1,10 @@
 
 <template>
-   <li :class="{ 'image-card--1': image.is_square, 'image-card--2': image.is_retangle }"> 
+   <li @click="open_image()" :class="{ 'image-card--1': image.is_square, 'image-card--2': image.is_retangle }"> 
     <img class="image-card__image" :src="image.photo" :alt="image.title">
-    <div class="image-card__body">
+    <div class="image-card__body" :style="{'background-color': file.cor_destaque}">
       <div v-if="image.title" class="image-title">
-        <a :href="image.photo" target="_blank">
           {{image.title}} 
-        </a>
         <br>
         <div class="image-description">
         {{image.description}} 
@@ -20,8 +18,19 @@
 <script>
 export default {
   name: 'ImageCard',
-  props: [ 'image' ]
+  props: [ 'image' ],
+  data(){
+    return{
+      file: require('../../data.json')
+    }
+  },
+  methods:{
+    open_image(){
+      this.$emit('open_image');
+    }
+  }
 }
+
 </script>
 
 
@@ -36,6 +45,7 @@ export default {
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
   background: white;
+  cursor: pointer;
   @media only screen and (max-width: 799px) {
     width: calc(50% - 1rem);
   }
@@ -53,6 +63,7 @@ export default {
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, .15);
   background: white;
+  cursor: pointer;
   @media only screen and (max-width: 799px) {
     width: calc(50% - 1rem);
   }
@@ -81,7 +92,6 @@ export default {
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #ee44aa;
 }
 .image-card--1:hover,.image-card--2:hover {
    transform: scale(1.2);
